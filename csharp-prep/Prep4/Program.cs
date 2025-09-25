@@ -37,10 +37,16 @@ class Program
         average = sum / numbers.Count;
         max = numbers.Max();
         min = numbers.Where(i => i > 0).Min();
+        numbers.Sort();
 
         Console.WriteLine($"The sum is: {sum}");
         Console.WriteLine($"The average is: {average}");
         Console.WriteLine($"The largest number is: {max}");
         Console.WriteLine($"The smallest number greater than 0 is: {min}");
+        Console.WriteLine("The sorted list is: ");
+        for (int i = 0; i < numbers.Count; i++)
+        {
+            Console.WriteLine(numbers[i]);
+        }
     }
 }
