@@ -10,18 +10,6 @@ class Journal
     public List<string> _promptOptions = new List<string> { "What’s one moment from today that you want to remember?", "What emotion lingered with you most today and why do you think it stayed?", "What’s one thing you learned — about yourself, someone else, or life — today?", "What went better than you expected today?", "Who or what made you feel grateful today?", "If you could send a short note to your morning self, what would it say?", "What was a small victory you had today?" };
 
     // behaviors
-    public int MainMenu()
-    {
-        Console.WriteLine("What would you like to do? ");
-        Console.WriteLine("1. Write a new entry");
-        Console.WriteLine("2. Display journal entries");
-        Console.WriteLine("3. Load a journal");
-        Console.WriteLine("4. Save a journal");
-        Console.WriteLine("5. Quit");
-        Console.Write("Please select an option (1-5): ");
-        int selection = int.Parse(Console.ReadLine());
-        return selection;
-    }
     public void Write()
     {
         Entry entry = new Entry();
