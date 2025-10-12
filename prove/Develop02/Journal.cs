@@ -7,7 +7,7 @@ class Journal
 {
     // attributes
     public List<Entry> _entryList = new List<Entry>();
-    public List<string> _promptOptions = new List<string> { "What’s one moment from today that you want to remember?", "What emotion lingered with you most today and why do you think it stayed?", "What’s one thing you learned — about yourself, someone else, or life — today?", "What went better than you expected today?", "Who or what made you feel grateful today?", "If you could send a short note to your morning self, what would it say?", "What was a small victory you had today?"};
+    public List<string> _promptOptions = new List<string> { "What’s one moment from today that you want to remember?", "What emotion lingered with you most today and why do you think it stayed?", "What’s one thing you learned — about yourself, someone else, or life — today?", "What went better than you expected today?", "Who or what made you feel grateful today?", "If you could send a short note to your morning self, what would it say?", "What was a small victory you had today?" };
 
     // behaviors
     public int MainMenu()
@@ -27,7 +27,7 @@ class Journal
         Entry entry = new Entry();
         entry._date = DateTime.Now.ToString("MM/dd/yyyy");
         Random random = new Random();
-        int promptSelect = random.Next(0,_promptOptions.Count - 1);
+        int promptSelect = random.Next(0, _promptOptions.Count - 1);
 
         entry._prompt = _promptOptions[promptSelect];
         Console.Write($"{entry._prompt}");
