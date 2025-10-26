@@ -68,7 +68,7 @@ class Program
 
                 Console.Clear();
                 scripture.Display();
-                Console.Write("\n\nPress enter to hide 3 words, type 'quit' to quit");
+                Console.Write("\n\nPress enter to hide 3 words, type 'quit' to quit: ");
                 string entry = Console.ReadLine();
 
                 while (true)
