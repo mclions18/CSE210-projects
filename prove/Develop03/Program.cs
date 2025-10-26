@@ -1,4 +1,5 @@
 using System;
+using System.ComponentModel;
 using System.Xml.Serialization;
 
 class Program
@@ -44,10 +45,24 @@ class Program
                 string book = Console.ReadLine();
                 Console.Write("What is the chapter? ");
                 int chapter = int.Parse(Console.ReadLine());
-                Console.Write("What are the verse/verses?(ex. 5 or 4-7) ");
-                string verses = Console.ReadLine();
-                reference = new Reference(book, chapter, verses);
-                Console.Write("What is the exact text of the verses you want to memorize? (Please type it in without the numbers between verese if there are multiple) ");
+                Console.Write("One verse or multiple? (1 for one, 2 for multiple) ");
+                string versecount = Console.ReadLine();
+                if (versecount == "1")
+                {
+                    Console.Write("What is the verse number? ");
+                    string versestart = Console.ReadLine();
+                    reference = new Reference(book, chapter, versestart);
+                }
+                else if(versecount == "2")
+                {
+                    bool multi = true;
+                    Console.Write("What is the starting verse number? ");
+                    string versestart = Console.ReadLine();
+                    Console.Write("What is the ending verse number? ");
+                    string verseend = Console.ReadLine();
+                    reference = new Reference(book, chapter, versestart, verseend, multi);
+                }
+                Console.Write("What is the exact text of all the verses you want to memorize? (Please type it in without the numbers between verese if there are multiple) ");
                 string text = Console.ReadLine();
                 scripture = new Scripture(reference, text);
 
