@@ -1,7 +1,7 @@
 using System;
 using System.ComponentModel;
 using System.Xml.Serialization;
-
+// To exceed requirments, I allowed the user to have to option to put in their own verse to memorize.  The program prompts them for the book, chapter, verse/verses (the program asks if they want to do a multi verse section and will correctly display the reference for multiple verses), and the text of the scripture they want to memorize. It then displays the users verse to them and allows them to remove words, just like the pre-provided verse.
 class Program
 {
     static void Main(string[] args)
