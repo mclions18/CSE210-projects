@@ -11,8 +11,9 @@ class Program
 
         Console.Clear();
         Console.WriteLine("\nWelcome to the scripture memorizer!\n");
-        while (true){
-           Console.Write("Would you like to give your own scripture or use our preloaded verse (James 1:5-6)? (1 for preloaded verse, 2 for own scripture) ");
+        while (true)
+        {
+            Console.Write("Would you like to give your own scripture or use our preloaded verse (James 1:5-6)? (1 for preloaded verse, 2 for own scripture) ");
             string choice = Console.ReadLine();
             if (choice == "1")
             {
@@ -53,7 +54,7 @@ class Program
                     string versestart = Console.ReadLine();
                     reference = new Reference(book, chapter, versestart);
                 }
-                else if(versecount == "2")
+                else if (versecount == "2")
                 {
                     bool multi = true;
                     Console.Write("What is the starting verse number? ");
@@ -92,7 +93,7 @@ class Program
             else
             {
                 Console.WriteLine("\nThat choice is invalid. Please try again.\n");
-            } 
+            }
         }
     }
 }
