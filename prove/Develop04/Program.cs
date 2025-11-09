@@ -1,6 +1,8 @@
 using System;
 using System.ComponentModel.Design;
 
+//To exceed expectations I created a method that will save and load a unique value for the amount of times an activity has been done, and display that value to the user at the end of an activity.
+
 class Program
 {
     static void Main(string[] args)
