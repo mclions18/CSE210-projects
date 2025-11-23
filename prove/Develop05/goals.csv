@@ -1,0 +1,6 @@
+885
+2|6|1
+SimpleGoal|simple1|simple test 1|50|True
+EternalGoal|eternal|eternal test 1|50
+ChecklistGoal|checklist1|checklist test 1|50|True|2|2|500
+SimpleGoal|simple2|This is a second simple goal|35|True
